@@ -2,11 +2,7 @@ package com.veterinaria.veterinaria.models;
 
 public class Admin extends Persona {
     static int IdAutoAdmin = 0;
-<<<<<<< HEAD
     private int _id;
-=======
-    private int _id ;
->>>>>>> 38e3859f3ff155b4054ab8cafb28e9060c5c7f79
     private String _NomAdmin, _contraseniaAdmin;
     private Persona _persona;
 
