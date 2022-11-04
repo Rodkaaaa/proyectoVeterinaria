@@ -15,12 +15,15 @@ public class VeterinariaApplication {
 		System.out.println(persona1.toString());
 		System.out.println(persona2.toString());
 
-		Usuario usua1 = new Usuario("fred",persona1);
+		Usuario usua1 = new Usuario("fred","1234",persona1);
 		System.out.println(usua1.toString());
 
-		Admin admin1 = new Admin("fredAdmin", persona2);
+		Admin admin1 = new Admin("fred","1234",persona1);
+		Admin fake = new Admin(null,null,null);
 		System.out.println(admin1.toString());
-		
+		System.out.println(admin1.validar(admin1.get_NomAdmin(),admin1.get_contraseniaAdmin(),persona1.getNombre()));
+		System.out.println(fake.validar(fake.get_NomAdmin(),fake.get_contraseniaAdmin(),persona1.getNombre())); 
+		System.out.println(usua1.validar(usua1.get_NomUsuario(),usua1.get_contraseniaUsuario(),persona1.getNombre()));
 	}
 
 	

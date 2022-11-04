@@ -3,7 +3,7 @@ package com.veterinaria.veterinaria.models;
 public class Usuario extends Persona {
     static int IdAutoUsuario = 0;
     private int _id ;
-    private String _NomUsuario;
+    private String _NomUsuario, _contraseniaUsuario;
     private Persona _persona;
 
     
@@ -12,25 +12,37 @@ public class Usuario extends Persona {
     }
 
 
-    public Usuario(String _NomUsuario, Persona _persona) {
+    public Usuario(String _NomUsuario,String _contraseniaUsuario, Persona _persona) {
         this._id = ++this.IdAutoUsuario;
         this._NomUsuario = _NomUsuario;
+        this._contraseniaUsuario = _contraseniaUsuario;
         this._persona = _persona;
     }
 
 
 
 
-    public Usuario(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomUsuario,
+    public Usuario(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomUsuario, String _contraseniaUsuario,
             Persona _persona) {
         super(nombre, apellido, email, rut, telefono);
         this._id = _id;
         this._NomUsuario = _NomUsuario;
+        this._contraseniaUsuario =_contraseniaUsuario;
         this._persona = _persona;
     }
 
 
     
+
+    public String get_contraseniaUsuario() {
+        return _contraseniaUsuario;
+    }
+
+
+    public void set_contraseniaUsuario(String _contraseniaUsuario) {
+        this._contraseniaUsuario = _contraseniaUsuario;
+    }
+
 
     public int get_id() {
         return _id;

@@ -3,34 +3,40 @@ package com.veterinaria.veterinaria.models;
 public class Admin extends Persona {
     static int IdAutoAdmin = 0;
     private int _id = ++this.IdAutoAdmin;
-    private String _NomAdmin, _contraseñáAdmin;
+    private String _NomAdmin, _contraseniaAdmin;
     private Persona _persona;
-    private String _contraseñáAdmin;
 
     
     public Admin() {
         super();
     }
 
-    public Admin(String _NomAdmin,String _contraseñáAdmin, Persona _persona) {
+    public Admin(String _NomAdmin, String _contraseniaAdmin, Persona _persona) {
         this._id = ++this.IdAutoAdmin;
         this._NomAdmin = _NomAdmin;
-        this._contraseñáAdmin= _contraseñáAdmin
+        this._contraseniaAdmin = _contraseniaAdmin;
         this._persona = _persona;
     }
 
 
-    public Admin(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomAdmin,
+    public Admin(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomAdmin,String _contraseniaAdmin,
             Persona _persona) {
         super(nombre, apellido, email, rut, telefono);
         this._id = _id;
         this._NomAdmin = _NomAdmin;
+        this._contraseniaAdmin = _contraseniaAdmin;
         this._persona = _persona;
     }
 
 
 
+    public String get_contraseniaAdmin() {
+        return _contraseniaAdmin;
+    }
 
+    public void set_contraseniaAdmin(String _contraseniaAdmin) {
+        this._contraseniaAdmin = _contraseniaAdmin;
+    }
 
     public int get_id() {
         return _id;

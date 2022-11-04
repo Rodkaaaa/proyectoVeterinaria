@@ -19,6 +19,20 @@ public class Persona{
         this._rut = rut;
         this._telefono = telefono;
     }
+    //funciones
+    public String validar(String usuarioAdmin, String contrasenia, String nombre) {
+        try {
+            if((usuarioAdmin == "fred") && (contrasenia == "1234")){
+                return "usuario Logeado, bienvenido: "  + nombre;
+            }else{
+                return "usuario incorrecto";
+            }  
+        } catch (Exception e) {
+            // TODO: handle exception
+            return "algo ingreso mal xdxd";
+        }
+    }
+
 
     //Getters and Setters
     public int getId() {
