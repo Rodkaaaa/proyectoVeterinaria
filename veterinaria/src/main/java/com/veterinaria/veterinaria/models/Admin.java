@@ -19,13 +19,11 @@ public class Admin extends Persona {
     }
 
 
-    public Admin(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomAdmin,String _contraseniaAdmin,
-            Persona _persona) {
+    public Admin(String nombre, String apellido, String email, String rut, int telefono, String _NomAdmin,String _contraseniaAdmin) {
         super(nombre, apellido, email, rut, telefono);
-        this._id = _id;
+        this._id = ++this.IdAutoAdmin;
         this._NomAdmin = _NomAdmin;
         this._contraseniaAdmin = _contraseniaAdmin;
-        this._persona = _persona;
     }
 
 
@@ -63,8 +61,13 @@ public class Admin extends Persona {
 
     @Override
     public String toString() {
-        return "Admin [_id=" + _id + ", _NomAdmin=" + _NomAdmin + ", _persona=" + _persona + "]";
+        return "Admin [_id=" + _id + ", _NomAdmin=" + _NomAdmin + ", _contraseniaAdmin=" + _contraseniaAdmin
+                + ", _persona=" + _persona + "]";
+
     }
-    
-    
+
+    public String toStringSuper() {
+        return "Admin [_id=" + _id + ", _NomAdmin=" + _NomAdmin + ", _contraseniaAdmin=" + _contraseniaAdmin
+                + ", _persona=" + super.toString() + "]";
+    }
 }

@@ -22,13 +22,11 @@ public class Usuario extends Persona {
 
 
 
-    public Usuario(String nombre, String apellido, String email, String rut, int telefono, int _id, String _NomUsuario, String _contraseniaUsuario,
-            Persona _persona) {
+    public Usuario(String nombre, String apellido, String email, String rut, int telefono, String _NomUsuario, String _contraseniaUsuario) {
         super(nombre, apellido, email, rut, telefono);
-        this._id = _id;
+        this._id = ++this.IdAutoUsuario;
         this._NomUsuario = _NomUsuario;
         this._contraseniaUsuario =_contraseniaUsuario;
-        this._persona = _persona;
     }
 
 
